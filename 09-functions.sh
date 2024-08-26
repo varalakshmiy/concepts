@@ -6,10 +6,10 @@ USERID=$(id -u)
 VALIDATE(){
     if [ $1 -ne 0 ]
 then
-echo "instalation is failure"
+echo "instalation is.... failure"
     exit 1
 else
-echo "instalation   success"
+echo "instalation ....  success"
 fi
     
 }
@@ -22,11 +22,14 @@ echo "ERROR: pls run the script with root access"
 #echo "instalation of mysql is success"
 fi
 #our responisbility again check thescript executed or not
+
 yun install mysql -y
- VALIDATE
+ VALIDATE $?
 
 
 yum install postfix -y
+ VALIDATE $?
+
 
 
 
